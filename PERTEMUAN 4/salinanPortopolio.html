@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Ainil Magsurah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+    body,html{height:100%;}
+
+    /* Navigasi */
+    nav {
+      background:#222;
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      padding:12px;
+      font-weight:bold;
+      position:fixed;
+      top:0;left:0;width:100%;
+      z-index:1000;
+    }
+    nav a {
+      color:white;
+      text-decoration:none;
+      font-size:16px;
+      padding:6px 12px;
+      transition:.3s;
+    }
+    nav a:hover {
+      background:white;
+      color:#222;
+      border-radius:5px;
+    }
+
+    /* Slide dasar */
+    .slide{
+      width:100%;
+      height:calc(100vh - 50px);
+      position:absolute;
+      top:50px;
+      left:0;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .6s;
+      color:#fff;
+      overflow:auto;
+    }
+    /* Tampilkan default HOME */
+    #slide1 {opacity:1;pointer-events:auto;z-index:1;}
+
+    /* Saat di target */
+    .slide:target {
+      opacity:1;
+      pointer-events:auto;
+      z-index:2;
+    }
+
+    /* Gradient per slide */
+    /* Background polos per slide */
+    #slide1 { background: #1e90ff; }   /* biru */
+    #slide2 { background: #f8f7f6; }   /* oranye */
+    #slide3 { background: #43cea2; }   /* hijau */
+
+
+    .cover img{
+      width:180px;height:180px;object-fit:cover;
+      border-radius:50%;border:5px solid #fff;
+      animation:float 3s ease-in-out infinite;
+    }
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+
+    .content{
+      background:rgba(255,255,255,0.9);
+      color:#333;
+      padding:20px;
+      min-height:100%;
+      border-radius:12px;
+      margin:20px;
+    }
+    h1{text-align:center;color:#1e90ff;margin-bottom:10px;font-size:22px}
+    h2{background:#1e90ff;color:#fff;padding:6px 12px;border-radius:8px;margin-bottom:8px;font-size:16px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+    }
+    .section{background:#e6f2ff;padding:12px;border-radius:10px}
+    .section p{margin:4px 0;font-size:14px}
+    .biodata p b{display:inline-block;width:120px}
+
+    .social-links{display:flex;flex-direction:column;gap:10px}
+    .social-links a{color:#1e90ff;text-decoration:none;font-weight:bold;display:flex;gap:8px;align-items:center}
+    .social-links a:hover{color:#00509e}
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 400px;  
+      object-fit: cover; 
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform .3s;
+    }
+    .gallery img:hover { transform: scale(1.03); }
+
+    /* Modal dengan :target */
+    .modal {
+      display:none;
+      position:fixed;
+      z-index:999;
+      left:0;top:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.8);
+    }
+    .modal:target {display:block;}
+    .modal-content {
+      margin:auto;
+      display:block;
+      max-width:80%;
+      max-height:80%;
+      border-radius:10px;
+      position:relative;
+      top:50%;
+      transform:translateY(-50%);
+    }
+    .close {
+      position:absolute;top:15px;right:25px;
+      color:white;font-size:30px;font-weight:bold;text-decoration:none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <a href="#slide1">HOME</a>
+    <a href="#slide2">PORTOFOLIO</a>
+    <a href="#slide3">GALERI FOTO</a>
+  </nav>
+
+  <!-- Slide 1 -->
+  <div id="slide1" class="slide">
+    <div class="content">
+      <div class="cover" style="text-align:center;margin-bottom:15px;">
+        <img src="photo4.jpeg" alt="Foto Ainil">
+        <h1>AINIL MAGSURAH</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div id="slide2" class="slide">
+    <div class="content">
+      <h1>PORTOFOLIO SAYA</h1>
+      <div class="grid">
+        <div class="section biodata">
+          <h2>BIODATA</h2>
+          <p><b>Nama:</b> Ainil Magsurah</p>
+          <p><b>Asal:</b> Bone, Sulawesi Selatan</p>
+          <p><b>Status:</b> Mahasiswi</p>
+        </div>
+
+        <div class="section">
+          <h2>PENDIDIKAN</h2>
+          <p>1. SD 103 HBM Kota Sorong</p>
+          <p>2. MTS Annur Nusa</p>
+          <p>3. MA Annur Nusa</p>
+          <p>4. Universitas Negeri Makassar</p>
+        </div>
+
+        <div class="section">
+          <h2>ORGANISASI</h2>
+          <p>OSIS</p>
+          <p>PADUAN SUARA</p>
+          <p>PMR</p>
+          <p>FORPIS</p>
+          <p>PRAMUKA</p>
+        </div>
+
+        <div class="section">
+          <h2>MEDIA SOSIAL</h2>
+          <div class="social-links">
+            <a href="https://instagram.com/ainilmgh__" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://tiktok.com/@_aiiiii2" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="https://github.com/Aiiyy25" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div id="slide3" class="slide">
+    <div class="content">
+      <h1>GALERI FOTO SAYA</h1>
+      <div class="gallery">
+        <a href="#foto1"><img src="photo1.jpeg" alt="Foto 1"></a>
+        <a href="#foto2"><img src="photo2.jpeg" alt="Foto 2"></a>
+        <a href="#foto3"><img src="photo3.jpeg" alt="Foto 3"></a>
+        <a href="#foto4"><img src="photo4.jpeg" alt="Foto 4"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Foto -->
+  <div id="foto1" class="modal">
+    <a href="#slide3" class="close">&times;</a>
+    <img class="modal-content" src="photo1.jpeg">
+  </div>
+
+  <div id="foto2" class="modal">
+    <a href="#slide3" class="close">&times;</a>
+    <img class="modal-content" src="photo2.jpeg">
+  </div>
+
+  <div id="foto3" class="modal">
+    <a href="#slide3" class="close">&times;</a>
+    <img class="modal-content" src="photo3.jpeg">
+  </div>
+
+  <div id="foto4" class="modal">
+    <a href="#slide3" class="close">&times;</a>
+    <img class="modal-content" src="photo4.jpeg">
+  </div>
+
+</body>
+</html>

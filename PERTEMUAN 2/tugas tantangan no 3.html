@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>Form Registrasi Account TCPNS</title>
+</head>
+<body>
+
+  <h2 align="center">Form Registrasi Account TCPNS</h2>
+  <p align="center">Silahkan isi form di bawah ini dengan baik dan benar.</p>
+
+  <form>
+    <table align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td>Nama:</td>
+        <td><input type="text" name="nama"></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email"></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password"></td>
+      </tr>
+      <tr>
+        <td>Jenis Kelamin:</td>
+        <td>
+          <select name="jk">
+            <option>Pilih Jenis Kelamin</option>
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Tanggal Lahir:</td>
+        <td>
+          <select name="tgl">
+            <option>Tgl:</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <!-- dst sampai 31 -->
+          </select>
+          <select name="bulan">
+            <option>Bulan:</option>
+            <option>Januari</option>
+            <option>Februari</option>
+            <option>Maret</option>
+            <option>April</option>
+            <option>Mei</option>
+            <option>Juni</option>
+            <option>Juli</option>
+            <option>Agustus</option>
+            <option>September</option>
+            <option>Oktober</option>
+            <option>November</option>
+            <option>Desember</option>
+          </select>
+          <select name="tahun">
+            <option>Tahun:</option>
+            <option>2023</option>
+            <option>2024</option>
+            <option>2025</option>
+            <!-- dst -->
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Kirim">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

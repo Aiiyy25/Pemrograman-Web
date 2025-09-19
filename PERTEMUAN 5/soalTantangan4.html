@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>Bangun Ruang</TITLE>
+</HEAD>
+<BODY>
+  <H2>Hitungan Bangun Ruang</H2>
+  <H3>Volume Kubus</H3>
+  Sisi: <INPUT TYPE="text" ID="sisi">
+  <INPUT TYPE="button" VALUE="Hitung" ONCLICK="kubus()">
+  <P ID="hasilKubus"></P>
+
+  <H3>Volume Balok</H3>
+  Panjang: <INPUT TYPE="text" ID="panjang">
+  Lebar: <INPUT TYPE="text" ID="lebar">
+  Tinggi: <INPUT TYPE="text" ID="tinggi">
+  <INPUT TYPE="button" VALUE="Hitung" ONCLICK="balok()">
+  <P ID="hasilBalok"></P>
+
+  <H3>Volume Tabung</H3>
+  Jari-jari: <INPUT TYPE="text" ID="jari">
+  Tinggi: <INPUT TYPE="text" ID="tinggiTabung">
+  <INPUT TYPE="button" VALUE="Hitung" ONCLICK="tabung()">
+  <P ID="hasilTabung"></P>
+
+  <SCRIPT LANGUAGE="JavaScript">
+    function kubus(){
+      var s = parseFloat(document.getElementById("sisi").value);
+      var volume = s * s * s;
+      document.getElementById("hasilKubus").innerHTML = "Volume kubus = " + volume;
+    }
+    function balok(){
+      var p = parseFloat(document.getElementById("panjang").value);
+      var l = parseFloat(document.getElementById("lebar").value);
+      var t = parseFloat(document.getElementById("tinggi").value);
+      var volume = p * l * t;
+      document.getElementById("hasilBalok").innerHTML = "Volume balok = " + volume;
+    }
+    function tabung(){
+      var r = parseFloat(document.getElementById("jari").value);
+      var t = parseFloat(document.getElementById("tinggiTabung").value);
+      var phi = 3.14;
+      var volume = phi * r * r * t;
+      document.getElementById("hasilTabung").innerHTML = "Volume tabung = " + volume;
+    }
+  </SCRIPT>
+</BODY>
+</HTML>

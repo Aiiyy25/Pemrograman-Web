@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.makanan, .minuman {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+}
+
+/* karakter unik tiap item makanan */
+.nasi { font-family: "Times New Roman"; font-size: 18px; color: brown; }
+.mie { font-family: Verdana; font-size: 16px; color: green; }
+.sate { font-family: Georgia; font-size: 17px; color: darkorange; }
+.bakso { font-family: Courier; font-size: 16px; color: purple; }
+
+/* karakter unik tiap item minuman */
+.teh { font-family: Arial; font-size: 16px; color: teal; }
+.kopi { font-family: Tahoma; font-size: 17px; color: sienna; }
+.jus { font-family: Comic Sans MS; font-size: 18px; color: darkgreen; }
+.susu { font-family: Calibri; font-size: 16px; color: navy; }

@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>Kalkulator Sederhana</TITLE>
+</HEAD>
+<BODY>
+  <H2>Kalkulator Sederhana</H2>
+  <FORM NAME="calc2">
+    Angka 1: <INPUT TYPE="text" NAME="num1"><BR>
+    Angka 2: <INPUT TYPE="text" NAME="num2"><BR><BR>
+
+    Pilih Operasi: 
+    <SELECT NAME="operasi">
+      <OPTION VALUE="+">Penjumlahan (+)</OPTION>
+      <OPTION VALUE="-">Pengurangan (-)</OPTION>
+      <OPTION VALUE="*">Perkalian (×)</OPTION>
+      <OPTION VALUE="/">Pembagian (÷)</OPTION>
+    </SELECT><BR><BR>
+
+    <INPUT TYPE="button" VALUE="Hitung" ONCLICK="hitung()"><BR><BR>
+
+    Hasil: <INPUT TYPE="text" NAME="hasil">
+  </FORM>
+
+  <SCRIPT LANGUAGE="JavaScript">
+    function hitung() {
+      var a = parseFloat(document.calc2.num1.value);
+      var b = parseFloat(document.calc2.num2.value);
+      var op = document.calc2.operasi.value;
+      var hasil = 0;
+
+      if(op==="+") hasil = a + b;
+      else if(op==="-") hasil = a - b;
+      else if(op==="*") hasil = a * b;
+      else if(op==="/") hasil = a / b;
+
+      document.calc2.hasil.value = hasil;
+    }
+  </SCRIPT>
+</BODY>
+</HTML>
